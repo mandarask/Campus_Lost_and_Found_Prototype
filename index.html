@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campus Lost & Found</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <h1>Campus Lost & Found</h1>
+    <p>Report lost items and help return found belongings to their owners.</p>
+  </header>
+
+  <main class="container">
+    <section class="panel">
+      <h2>Search for an item</h2>
+      <div class="search-row">
+        <input id="searchInput" type="search" placeholder="Search name, description, category or location">
+        <button id="searchButton">Search</button>
+        <button id="showAllButton" class="secondary">Show all</button>
+      </div>
+      <p class="hint">Example: blue water bottle, library, electronics.</p>
+      <div id="results" class="grid" aria-live="polite"></div>
+    </section>
+
+    <section class="panel">
+      <h2>Report a lost or found item</h2>
+      <form id="itemForm">
+        <div class="form-grid">
+          <label>Report type
+            <select id="type" required>
+              <option value="Lost">Lost</option>
+              <option value="Found">Found</option>
+            </select>
+          </label>
+          <label>Item name
+            <input id="name" required placeholder="e.g. Blue water bottle">
+          </label>
+          <label>Category
+            <select id="category" required>
+              <option>Accessories</option><option>Books</option><option>Electronics</option>
+              <option>Clothing</option><option>Other</option>
+            </select>
+          </label>
+          <label>Location
+            <input id="location" required placeholder="e.g. Central library">
+          </label>
+          <label class="wide">Description
+            <textarea id="description" required rows="3" placeholder="Add colour, brand or other identifying details"></textarea>
+          </label>
+          <label class="wide">Contact (college email or phone)
+            <input id="contact" required placeholder="Your college contact details">
+          </label>
+        </div>
+        <button type="submit">Submit report</button>
+      </form>
+      <p id="formMessage" class="message" role="status"></p>
+    </section>
+    <p class="privacy-note">Prototype note: reports are stored only in this browser using local storage. Do not enter passwords, private documents or sensitive personal information.</p>
+  </main>
+  <footer>Campus Lost & Found • Student prototype</footer>
+  <script src="app.js"></script>
+</body>
+</html>

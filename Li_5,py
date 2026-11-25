@@ -1,0 +1,64 @@
+# L2.1 - Six Practices Mapped to Agile Principles
+# Case Study: Campus Lost and Found
+
+practices = [
+    {
+        "practice": "Show a working search feature every week",
+        "principle": "Working software over comprehensive documentation",
+        "reason": "A usable increment demonstrates progress"
+    },
+    {
+        "practice": "Discuss student feedback directly",
+        "principle": "Customer collaboration",
+        "reason": "Users help shape the solution"
+    },
+    {
+        "practice": "Change search filters after feedback",
+        "principle": "Responding to change",
+        "reason": "Plans adapt to learning and user needs"
+    },
+    {
+        "practice": "Developers and testers coordinate daily",
+        "principle": "Individuals and interactions",
+        "reason": "Communication reduces handoff delays"
+    },
+    {
+        "practice": "Keep the report form simple",
+        "principle": "Simplicity",
+        "reason": "Maximise the amount of work not done"
+    },
+    {
+        "practice": "Review and improve the sprint process",
+        "principle": "Regular reflection and adjustment",
+        "reason": "The team improves its effectiveness"
+    }
+]
+
+print("=" * 90)
+print("          CAMPUS LOST AND FOUND APPLICATION")
+print("             AGILE PRACTICES MAPPING")
+print("=" * 90)
+
+for i, item in enumerate(practices, start=1):
+
+    print("\nPractice", i)
+    print("-" * 90)
+
+    print("Practice Statement :")
+    print(item["practice"])
+
+    print("\nAgile Value / Principle :")
+    print(item["principle"])
+
+    print("\nReason :")
+    print(item["reason"])
+
+print("\n" + "=" * 90)
+print("SUMMARY")
+print("=" * 90)
+
+print("Total Agile Practices :", len(practices))
+
+print("\nAll six Agile practices were mapped successfully.")
+
+print("=" * 90)
